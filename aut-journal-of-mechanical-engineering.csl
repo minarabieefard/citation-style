@@ -37,13 +37,11 @@
 
       <choose>
 
-        <!-- Journal Article -->
         <if type="article-journal">
 
           <names variable="author" suffix=", ">
             <name
                 initialize-with="."
-                name-as-sort-order="false"
                 delimiter=", "
                 delimiter-precedes-last="always"/>
             <et-al/>
@@ -61,24 +59,15 @@
             <date-part name="year"/>
           </date>
 
-          <choose>
-            <if variable="page">
-              <text variable="page" prefix=" "/>
-            </if>
-            <else>
-              <text variable="article-number" prefix=" "/>
-            </else>
-          </choose>
+          <text variable="page" prefix=" "/>
 
         </if>
 
-        <!-- Book -->
         <else-if type="book">
 
           <names variable="author" suffix=", ">
             <name
                 initialize-with="."
-                name-as-sort-order="false"
                 delimiter=", "
                 delimiter-precedes-last="always"/>
             <et-al/>
@@ -96,13 +85,11 @@
 
         </else-if>
 
-        <!-- Book Chapter -->
         <else-if type="chapter">
 
           <names variable="author" suffix=", ">
             <name
                 initialize-with="."
-                name-as-sort-order="false"
                 delimiter=", "
                 delimiter-precedes-last="always"/>
             <et-al/>
@@ -120,13 +107,11 @@
 
         </else-if>
 
-        <!-- Conference Paper -->
         <else-if type="paper-conference">
 
           <names variable="author" suffix=", ">
             <name
                 initialize-with="."
-                name-as-sort-order="false"
                 delimiter=", "
                 delimiter-precedes-last="always"/>
             <et-al/>
@@ -144,13 +129,11 @@
 
         </else-if>
 
-        <!-- Thesis -->
         <else-if type="thesis">
 
           <names variable="author" suffix=", ">
             <name
                 initialize-with="."
-                name-as-sort-order="false"
                 delimiter=", "
                 delimiter-precedes-last="always"/>
           </names>
@@ -167,13 +150,11 @@
 
         </else-if>
 
-        <!-- Report -->
         <else-if type="report">
 
           <names variable="author" suffix=", ">
             <name
                 initialize-with="."
-                name-as-sort-order="false"
                 delimiter=", "
                 delimiter-precedes-last="always"/>
           </names>
@@ -188,13 +169,11 @@
 
         </else-if>
 
-        <!-- Other Types -->
         <else>
 
           <names variable="author" suffix=", ">
             <name
                 initialize-with="."
-                name-as-sort-order="false"
                 delimiter=", "
                 delimiter-precedes-last="always"/>
             <et-al/>
