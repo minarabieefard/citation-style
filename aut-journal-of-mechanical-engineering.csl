@@ -8,11 +8,17 @@
     <title>AUT Journal of Mechanical Engineering</title>
     <title-short>AUT J Mech Eng</title-short>
     <id>http://www.zotero.org/styles/aut-journal-of-mechanical-engineering</id>
-    <link href="http://www.zotero.org/styles/aut-journal-of-mechanical-engineering" rel="self"/>
-    <updated>2026-10-04T12:08:05+00:00</updated>
+    <link href="http://www.zotero.org/styles/aut-journal-of-mechanical-engineering"
+          rel="self"/>
+    <updated>2026-10-04T13:30:00+00:00</updated>
   </info>
 
-  <citation>
+  <!-- ========================= -->
+  <!-- CITATIONS                  -->
+  <!-- ========================= -->
+
+  <citation collapse="citation-number">
+
     <sort>
       <key variable="citation-number"/>
     </sort>
@@ -20,7 +26,13 @@
     <layout prefix="[" suffix="]" delimiter=", ">
       <text variable="citation-number"/>
     </layout>
+
   </citation>
+
+
+  <!-- ========================= -->
+  <!-- BIBLIOGRAPHY              -->
+  <!-- ========================= -->
 
   <bibliography
       hanging-indent="false"
@@ -35,168 +47,272 @@
 
     <layout suffix=".">
 
-      <text variable="citation-number" prefix="[" suffix="] "/>
+      <!-- Reference number -->
+      <text variable="citation-number"
+            prefix="["
+            suffix="] "/>
+
+
+      <!-- ========================= -->
+      <!-- JOURNAL ARTICLE            -->
+      <!-- ========================= -->
 
       <choose>
 
-        <!-- Journal Article -->
         <if type="article-journal">
 
           <names variable="author" suffix=", ">
+
             <name
                 initialize-with="."
                 delimiter=", "
                 delimiter-precedes-last="always"/>
+
             <et-al/>
+
           </names>
 
-          <text variable="title" suffix=", "/>
+          <text variable="title"
+                suffix=", "/>
 
-          <text variable="container-title" suffix=", "/>
+          <text variable="container-title"
+                suffix=", "/>
 
           <text variable="volume"/>
 
-          <text variable="issue" prefix="(" suffix=")"/>
+          <text variable="issue"
+                prefix="("
+                suffix=")"/>
 
-          <date variable="issued" prefix=" (" suffix=")">
+          <date variable="issued"
+                prefix=" ("
+                suffix=")">
+
             <date-part name="year"/>
+
           </date>
 
-          <text variable="page" prefix=" "/>
+          <text variable="page"
+                prefix=" "/>
 
         </if>
 
-        <!-- Book -->
+
+        <!-- ========================= -->
+        <!-- BOOK                       -->
+        <!-- ========================= -->
+
         <else-if type="book">
 
           <names variable="author" suffix=", ">
+
             <name
                 initialize-with="."
                 delimiter=", "
                 delimiter-precedes-last="always"/>
+
             <et-al/>
+
           </names>
 
-          <text variable="title" suffix=", "/>
+          <text variable="title"
+                suffix=", "/>
 
-          <text variable="publisher" suffix=", "/>
+          <text variable="publisher"
+                suffix=", "/>
 
-          <text variable="publisher-place" suffix=", "/>
+          <text variable="publisher-place"
+                suffix=", "/>
 
-          <date variable="issued" prefix=" (" suffix=")">
+          <date variable="issued"
+                prefix=" ("
+                suffix=")">
+
             <date-part name="year"/>
+
           </date>
 
         </else-if>
 
-        <!-- Book Chapter -->
+
+        <!-- ========================= -->
+        <!-- BOOK CHAPTER               -->
+        <!-- ========================= -->
+
         <else-if type="chapter">
 
           <names variable="author" suffix=", ">
+
             <name
                 initialize-with="."
                 delimiter=", "
                 delimiter-precedes-last="always"/>
+
             <et-al/>
+
           </names>
 
-          <text variable="title" suffix=", "/>
+          <text variable="title"
+                suffix=", "/>
 
-          <text variable="container-title" suffix=", "/>
+          <text variable="container-title"
+                suffix=", "/>
 
-          <date variable="issued" prefix=" (" suffix=")">
+          <date variable="issued"
+                prefix=" ("
+                suffix=")">
+
             <date-part name="year"/>
+
           </date>
 
-          <text variable="page" prefix=" "/>
+          <text variable="page"
+                prefix=" "/>
 
         </else-if>
 
-        <!-- Conference Paper -->
+
+        <!-- ========================= -->
+        <!-- CONFERENCE PAPER           -->
+        <!-- ========================= -->
+
         <else-if type="paper-conference">
 
           <names variable="author" suffix=", ">
+
             <name
                 initialize-with="."
                 delimiter=", "
                 delimiter-precedes-last="always"/>
+
             <et-al/>
+
           </names>
 
-          <text variable="title" suffix=", "/>
+          <text variable="title"
+                suffix=", "/>
 
-          <text variable="container-title" suffix=", "/>
+          <text variable="container-title"
+                suffix=", "/>
 
-          <date variable="issued" prefix=" (" suffix=")">
+          <date variable="issued"
+                prefix=" ("
+                suffix=")">
+
             <date-part name="year"/>
+
           </date>
 
-          <text variable="page" prefix=" "/>
+          <text variable="page"
+                prefix=" "/>
 
         </else-if>
 
-        <!-- Thesis -->
+
+        <!-- ========================= -->
+        <!-- THESIS                     -->
+        <!-- ========================= -->
+
         <else-if type="thesis">
 
           <names variable="author" suffix=", ">
+
             <name
                 initialize-with="."
                 delimiter=", "
                 delimiter-precedes-last="always"/>
+
+            <et-al/>
+
           </names>
 
-          <text variable="title" suffix=", "/>
+          <text variable="title"
+                suffix=", "/>
 
-          <text variable="genre" suffix=", "/>
+          <text variable="genre"
+                suffix=", "/>
 
-          <text variable="publisher" suffix=", "/>
+          <text variable="publisher"
+                suffix=", "/>
 
-          <date variable="issued" prefix=" (" suffix=")">
+          <date variable="issued"
+                prefix=" ("
+                suffix=")">
+
             <date-part name="year"/>
+
           </date>
 
         </else-if>
 
-        <!-- Report -->
+
+        <!-- ========================= -->
+        <!-- REPORT                      -->
+        <!-- ========================= -->
+
         <else-if type="report">
 
           <names variable="author" suffix=", ">
+
             <name
                 initialize-with="."
                 delimiter=", "
                 delimiter-precedes-last="always"/>
+
+            <et-al/>
+
           </names>
 
-          <text variable="title" suffix=", "/>
+          <text variable="title"
+                suffix=", "/>
 
-          <text variable="publisher" suffix=", "/>
+          <text variable="publisher"
+                suffix=", "/>
 
-          <date variable="issued" prefix=" (" suffix=")">
+          <date variable="issued"
+                prefix=" ("
+                suffix=")">
+
             <date-part name="year"/>
+
           </date>
 
         </else-if>
 
-        <!-- Other Types -->
+
+        <!-- ========================= -->
+        <!-- OTHER TYPES                -->
+        <!-- ========================= -->
+
         <else>
 
           <names variable="author" suffix=", ">
+
             <name
                 initialize-with="."
                 delimiter=", "
                 delimiter-precedes-last="always"/>
+
             <et-al/>
+
           </names>
 
-          <text variable="title" suffix=", "/>
+          <text variable="title"
+                suffix=", "/>
 
-          <text variable="container-title" suffix=", "/>
+          <text variable="container-title"
+                suffix=", "/>
 
-          <date variable="issued" prefix=" (" suffix=")">
+          <date variable="issued"
+                prefix=" ("
+                suffix=")">
+
             <date-part name="year"/>
+
           </date>
 
-          <text variable="page" prefix=" "/>
+          <text variable="page"
+                prefix=" "/>
 
         </else>
 
